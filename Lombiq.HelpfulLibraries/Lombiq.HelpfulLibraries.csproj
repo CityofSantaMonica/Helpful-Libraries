@@ -2,9 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**;Tests\**</DefaultItemExcludes>
     <LangVersion>Latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Tests\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -24,6 +28,7 @@
     <PackageReference Include="OrchardCore.Infrastructure.Abstractions" Version="1.0.0-rc2-16162" />
     <PackageReference Include="OrchardCore.Navigation.Core" Version="1.0.0-rc2-16162" />
     <PackageReference Include="OrchardCore.Queries" Version="1.0.0-rc2-16162" />
+    <PackageReference Include="OrchardCore.Email.Abstractions" Version="1.0.0-rc2-16162" />
     <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.0.0-rc2-16162" />
     <PackageReference Include="OrchardCore.Users.Core" Version="1.0.0-rc2-16162" />
   </ItemGroup>
